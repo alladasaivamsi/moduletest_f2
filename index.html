@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beautiful Gallery</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="images">
+        <section class="container" id="container">
+            <button class="image1" id="image1" onclick="register()"><h1>Image 1</h1></button>
+            <button class="image2" id="image2" onclick="display()"><h1>Image 2</h1></button>
+            <button class="image3" id="image3" onclick="dice()"><h1>Image 3</h1></button>
+            <button class="image4" id="image4" onclick="coupon()"><h1>Image 4</h1></button>
+        </section>
+    </div>
+    
+    <div id="registerform">
+        <section class="container1" id="container1">
+            <header>Register</header>
+            <form onsubmit="addUser(event)">
+                <div class="field name-field">
+                    <div class="input-field">
+                        <label for="name" class="name">Name:</label>
+                        <input type="text" placeholder="Enter your Name" class="fname" id="fname">
+                    </div>
+                </div>
+    
+                <div class="field email-field">
+                    <div class="input-field">
+                        <label for="email" class="email1">Email:</label>
+                        <input type="email" placeholder="Enter your email" class="email" id="email">
+                    </div>
+                </div>
+    
+                <div class="field username-field">
+                    <div class="input-field">
+                        <label for="name" class="userName">Username:</label>
+                        <input type="text" placeholder="Enter your Username" class="username" id="username">
+                    </div>
+                </div>   
+                <div class="input-field button" id="submit">
+                    <input type="submit" value="Submit">
+                </div>
+            </form>
+        </section>
+    </div>
+
+    <div id="displayData">
+        <section id="container2">
+            <div id="displayName">
+                <label for="name"><h1>Name: <span id="namevalue"></span></h1></label>
+            </div>
+            <div id="displayEmail">
+                <label for="email"><h1>Email: <span id="emailvalue"></span></h1></label>
+            </div>
+            <div id="displayUserName">
+                <label for="username"><h1>Username: <span id="usernamevalue"></span></h1></label>
+            </div>
+        </section>
+    </div>
+   
+    <div id="dice">
+        <div id="container3">
+            <div id="diceData">
+                <div id="attemptText">
+                    <h3>Attempt No: <span id="attemptNumber">0</span></h3>
+                </div>
+                <div id="chanceText">
+                    <h3>Chance No: <span id="chanceNumber">0</span></h3>
+                </div>
+            </div>           
+            <div id="dicegame" onclick="dicegame()">              
+                <img src="dice1.png" alt="dice">
+            </div>
+            <div id="scoreText">
+                <h1>Score: <span id="playerScore">0</span></h1>
+            </div>
+        </div>
+    </div>
+
+    <div id="coupon">
+        <div id="container4">
+            <div id="coupon-heading">
+                <h1>Coupon Code</h1>
+            </div>
+            <div id="coupon-card">
+                <span id="cpnCode"></span>
+                <input type="button" id="cpnBtn" value="COPY CODE" onclick="createRandomCoupon(12)">
+            </div>            
+        </div>
+        <div id="submitBtn" onclick="openPopup()">
+            Thank You
+        </div>
+    </div>
+    
+    <div id="pop-up">
+        <img src="green check mark.jpg" height="100">
+        <h2>Congrulations</h2>
+        <button type="button" onclick="closePopup()">Thank You</button>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

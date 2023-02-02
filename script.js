@@ -214,3 +214,54 @@ let closePopup = function() {
         isClicked = true;
     }
 }
+
+const image1 = document.getElementById('image1'); 
+const image2 = document.getElementById('image2'); 
+const image3 = document.getElementById('image3'); 
+const image4 = document.getElementById('image4'); 
+
+image1.addEventListener("click", (e) => {
+    e.preventDefault();
+    register();
+    image3.style.pointerEvents="none";
+    image4.style.pointerEvents="none";
+});
+
+submitBtn.addEventListener("click" , (e) => {
+    e.preventDefault();
+    display();
+    image2.style.pointerEvents="auto";
+});
+
+image2.addEventListener("click", (e) => {
+    e.preventDefault();
+    display();
+    image1.style.pointerEvents="none";
+    image3.style.pointerEvents="auto";
+});
+
+image3.addEventListener("click", (e) => {
+    e.preventDefault();
+    dice();
+    image1.style.pointerEvents="none";
+    image2.style.pointerEvents="none";
+    image4.style.pointerEvents="auto";
+});
+
+image4.addEventListener("click", (e) => {
+    e.preventDefault();
+    coupon();
+    image1.style.pointerEvents="none";
+    image2.style.pointerEvents="none";
+    image3.style.pointerEvents="none";
+});
+ 
+submitBtn.addEventListener("click" , (e) => {
+    e.preventDefault();
+    openPopup();
+    image1.style.pointerEvents="none";
+    image2.style.pointerEvents="none";
+    image3.style.pointerEvents="none";
+    image4.style.pointerEvents="none";
+    popup.style.pointerEvents="auto";
+});
